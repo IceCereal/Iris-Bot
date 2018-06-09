@@ -15,5 +15,5 @@
   &nbsp;&nbsp;&nbsp;&nbsp;Fun elements:
   <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sending a meme from Reddit: ++sendMeme <br/>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Making a meme from existing Templates: ++makeMeme <br/>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Getting a joke: ++joke &ltOptional Argument: Dark&gt </h5>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Getting a joke: ++joke &ltOptional Argument: Dark&gt </h5><br/>
   &nbsp;&nbsp;&nbsp;&nbsp;At the end of each day, the bot will count the number of messages and automatically update the roles of people who have more than 1,000, 5,000 and 10,000 messages in the guild. 
