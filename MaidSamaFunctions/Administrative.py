@@ -37,7 +37,7 @@ class AdminBot:
             return -1
 
         try:
-            sendEmbed.set_thumbnail(embedThumbnail)
+            sendEmbed.set_thumbnail(url=embedThumbnail)
         except:
             await ctx.channel.send(content="```Fail#AB05```")
             print ("Fail#AB05 Command: warning-Embed.set_thumbnail()")
@@ -105,7 +105,7 @@ class AdminBot:
             return -1
 
         try:
-            sendEmbed.set_thumbnail(embedThumbnail)
+            sendEmbed.set_thumbnail(url=embedThumbnail)
         except:
             await ctx.channel.send(content="```Fail#AB05```")
             print ("Fail#AB05 Command: warning-Embed.set_thumbnail()")
