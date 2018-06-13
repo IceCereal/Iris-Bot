@@ -5,7 +5,6 @@ class AdminBot:
     def __init__(self, bot):
         self.botAdmin = bot
 
-
 """___________"""
     @botAdmin.command(name="warn",
                         aliases=['warning'],
