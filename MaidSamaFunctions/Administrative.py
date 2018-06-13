@@ -14,6 +14,7 @@ class AdminBot:
     @botAdmin.guild_only()
     @botAdmin.has_permissions(kick_members=True)
     async def warning(self, ctx, providedUserID : int, reason : str):
+        
         try:
             warnUser = botAdmin.get_user(providedUserID)
         except:
