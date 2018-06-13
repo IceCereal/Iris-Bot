@@ -6,6 +6,7 @@ Alex Rothschild#6666
 
 import discord
 from discord.ext import commands
+import asyncio
 
 from os import listdir
 from os.path import isfile, join
@@ -28,23 +29,16 @@ if __name__ == '__main__':
             traceback.print_exc()
 """
 
-"""Switch On"""
+"""OnReady_________"""
 @bot.event
 async def on_ready():
-    print ("Logged in as:\t" + str(bot.user.name))
+    print ("\nLogged in as:\t" + str(bot.user.name))
     print ("-----------------")
 
     try:
         await bot.change_presence(activity=discord.Game(name="my masters chores"))
     except:
         print ("FAIL#MS02 bot.change_presence(...)")
-
-
-"""A Message that prints when a command invoker does not have enough permissions to invoke the command"""
-@bot.event
-async def on_command_error(ctx, error):
-        if isinstance(error, commands.CheckFailure):
-            await ctx.send("You have no power here.")
 
 try:
     bot.run(TOKEN)
