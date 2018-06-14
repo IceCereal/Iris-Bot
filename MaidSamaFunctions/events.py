@@ -42,11 +42,13 @@ class Events:
     """OnConnect_________"""
     @botEvent.event
     async def on_connect(self):
+
         print ("\nConnected to Discord")
 
     """OnMessageDelete_________"""
     @botEvent.event
     async def on_message_delete(self,message):
+
         print ("\nMessage Delete:")
         print ("Author:\t"+str(message.author))
         print ("Content:\t"+str(message.content))
