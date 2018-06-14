@@ -5,16 +5,20 @@ class AdminBot:
     def __init__(self, bot):
         self.botAdmin = bot
 
+    def check_admin_channel(ctx):
+        return ctx.channel.id == get_channel_id("AdminBot_Control")
+
 """___________"""
     @botAdmin.command(name="warn",
                         aliases=['warning'],
                         description="Warning",
                         brief="warn a user",
                         hidden=True)
-    @botAdmin.guild_only()
-    @botAdmin.has_permissions(kick_members=True)
+    @commands.guild_only()
+    @commands.has_permissions(kick_members=True)
+    @commands.check(check_admin_channel)
     async def warning(self, ctx, providedUserID : int, reason : str):
-        
+
         try:
             warnUser = botAdmin.get_user(providedUserID)
         except:
@@ -27,7 +31,7 @@ class AdminBot:
         embedDesc += "This is a Formal Infraction through a warning."
         embedDesc += "\nIf you think your infraction is undoubtedly unjustified,"
         embedDesc += " please **do not** post about it in a public channel but take it up with an administrator.\n"
-        embedThumbnail = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Angry_robot.svg/404px-Angry_robot.svg.png"
+        embedThumbnail = "http://i.imgur.com/XKmsqJN.jpg"
 
         try:
             sendEmbed = discord.Embed(title=embedTitle, description=embedDesc, colour=embedColour)
@@ -80,8 +84,9 @@ class AdminBot:
                         description="strike",
                         brief="send a strike to a user",
                         hidden=True)
-    @botAdmin.guild_only()
-    @botAdmin.has_permissions(kick_members=True)
+    @commands.guild_only()
+    @commands.has_permissions(kick_members=True)
+    @commands.check(check_admin_channel)
     async def strike(self, ctx, providedUserID : int, reason : str):
         try:
             strikeUser = botAdmin.get_user(providedUserID)
@@ -95,7 +100,7 @@ class AdminBot:
         embedDesc += "This is a Formal Infraction through a strike."
         embedDesc += "\nIf you think your infraction is undoubtedly unjustified,"
         embedDesc += " please **do not** post about it in a public channel but take it up with an administrator.\n"
-        embedThumbnail = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Angry_robot.svg/404px-Angry_robot.svg.png"
+        embedThumbnail = "http://i.imgur.com/XKmsqJN.jpg"
 
         try:
             sendEmbed = discord.Embed(title=embedTitle, description=embedDesc, colour=embedColour)
@@ -136,9 +141,42 @@ class AdminBot:
         Update(Guild=str(Message.guild.id)), modUser=(ctx.user.id), affectedUser=(warnUser.id), warning=1)
         """
 
+        sendUpdate = ">"+ctx.user.mention+"\tWarned\t"+warnUser.mention+"\tReason: "+reason
+        await ctx.channel.send("```"+sendUpdate+"```")
+
+"""___________"""
+    @botAdmin.command(name="welcomeTheMod",
+                        hidden=True)
+    @commands.guild_only()
+    @commands.has_permissions(administrator=True)
+    @commands.check(check_admin_channel)
+    async def welcomeTheMod(self, ctx, providedUserID : int):
         try:
-            sendUpdate = ">"+ctx.user.mention+"\tWarned\t"+warnUser.mention+"\tReason: "+reason
-            await ctx.channel.send("```"+sendUpdate+"```")
+            newMod = botAdmin.get_user(providedUserID)
         except:
-            await ctx.channel.send("```Sent warning. Fail#AB08```")
-            print ("Fail#AB08 Command: warning-sendUpdate")
+            await ctx.channel.send("```Fail#AB09\n(most likely that the ID provided is incorrect)\n(Did you leave a space between the command and the ID?)```")
+            print ("Fail#AB09 Command: welcomeTheMod-newMod = bot.get_user(...)")
+            return
+
+        await ctx.channel.send("```The new member you want to make a mod is: "+str(newMod.display_name))
+        await ctx.channel.send("```Type \"Blue\" to confirm (10 s)")
+
+        try:
+            confirmMsg = await  botAdmin.wait_for(event = 'message', timeout = 10)
+        except:
+            await ctx.channel.send("```Aborted```")
+            return
+
+        if (confirmMsg.content != "Blue"):
+            await ctx.channel.send("```Aborted```")
+            return
+
+        embedTitle = str(ctx.guild.name)
+        embedDesc = "Congratulations on being promoted to a moderator!"
+
+
+        try:
+
+        except:
+            print ("fail")
+            return
