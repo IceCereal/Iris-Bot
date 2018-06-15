@@ -7,8 +7,8 @@
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sending a strike to a member : ++strike &ltUserID&gt <br/>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kicking out a member : ++kick &ltUserID&gt <br/>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Banning a member : ++ban &ltUserID&gt <br/>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Muting a member : ++mute &lttime_in_minutes&gt UserID
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creating a poll: ++poll<<br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Muting a member : ++mute &lttime_in_minutes&gt &ltUserID&gt <br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creating a poll: ++poll<br/>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Echo a message: ++echo &ltchannel id&gt &ltMessageContent&gt</h5>
   &nbsp;&nbsp;&nbsp;&nbsp;Store command-ref's:
   <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;++storeCommand &ltCommandName&gt &ltText to display when called&gt</h5>
