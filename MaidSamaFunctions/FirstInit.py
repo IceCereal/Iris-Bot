@@ -1,4 +1,4 @@
-"""
+Cereal"""
 A bot command that is to be used only once.
 This initializes every thing that is to be required.
 """
@@ -25,7 +25,7 @@ class AdminDeployBot:
         joinedMsg += "\nHello. My name is Maid-Sama. Thank you for inviting me. I'm here to help you with your chores."
         joinedMsg += "\n\n>You can call for me by using the '++' command prefix"
         joinedMsg += "\n\nInstructions:"
-        joinedMsg += "\n\n>Run the command: ++inititiateABlueSequence"
+        joinedMsg += "\n\n>Run the command: ++inititiateACerealSequence"
         joinedMsg += "\n\nThis creates two channels: AdminBot_Control and Polls."
         joinedMsg += "\n\nAdminBot_Control is the channel where the Admin's can communicate with me. "
         joinedMsg += "I shall be sending you updates on the server's happenings and you can assign me chores there."
@@ -45,7 +45,7 @@ class AdminDeployBot:
         joinedMsg += "\n\nThis sends a direct message to the person you want to make a moderator about the rules of being"
         joinedMsg += " a moderator and the commands that they can use."
         joinedMsg += "\n\nThank you for inviting me to this server and I hope to serve you well. If you have any questions,"
-        joinedMsg += " please ask it to my creator: BlueCereal in your private admins channel"
+        joinedMsg += " please ask it to my creator: IceCereal in your private admins channel"
 
         joinedMsg += "```"
 
@@ -55,13 +55,13 @@ class AdminDeployBot:
     Authorizes an Admininstrative HQ for the Guild
     Creates a Polls Channel
     """
-    @botAdmin.command(name="inititiateABlueSequence",
+    @botAdmin.command(name="inititiateACerealSequence",
     					hidden=True,)
     @botAdmin.guild_only()
     @botAdmin.has_permissions(administrator=True)
-    async def inititiateABlueSequence(self, ctx):
+    async def inititiateACerealSequence(self, ctx):
 
-        await ctx.channel.send(content="```Type: Blue\nYou have 10 seconds```", delete_after=10)
+        await ctx.channel.send(content="```Type: Cereal\nYou have 10 seconds```", delete_after=10)
 
         try:
 
@@ -69,7 +69,7 @@ class AdminDeployBot:
 
             AdminBotMessage = 0
 
-            if (msg.content == "Blue" and msg.channel == ctx.channel):
+            if (msg.content == "Cereal" and msg.channel == ctx.channel):
 
                 roles = ctx.message.guild.roles
 
@@ -95,7 +95,7 @@ class AdminDeployBot:
 
                         await ctx.channel.send(content="```Fail#ABD01.01\nYou have to give me \"administrator / manage channels\" permissions\n\n"
                         "It would be better if you give me all the permissions```")
-                        print ("Fail#ABD01.01 Command: inititiateABlueSequence")
+                        print ("Fail#ABD01.01 Command: inititiateACerealSequence")
 
                     else:
 
@@ -105,7 +105,7 @@ class AdminDeployBot:
                         await ctx.channel.send(message="```Deleting Channel: AdminBot_Control")
                         AdminBotMessage.channel.delete(reason="administrator permissions were not given")
 
-                        print ("Fail#ABD01.02 Command: inititiateABlueSequence")
+                        print ("Fail#ABD01.02 Command: inititiateACerealSequence")
 
                     return 0
 
@@ -130,7 +130,7 @@ class AdminDeployBot:
                 except:
 
                     await ctx.channel.send(content="```Fail#ABD02```")
-                    print ("Fail#ABD02 Command: inititiateABlueSequence")
+                    print ("Fail#ABD02 Command: inititiateACerealSequence")
 
                     await ctx.message.guild.delete("")
 
