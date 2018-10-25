@@ -7,17 +7,17 @@ Alex Rothschild#6666
 import discord
 from discord.ext import commands
 import asyncio
+import ast
 
 from os import listdir
 from os.path import isfile, join
 
 import sys, traceback
 
-TOKEN = ""
 BOT_PREFIX = ('++')
 bot = commands.Bot(command_prefix=BOT_PREFIX)
 
-"""cogs_dir = "MaidSamaFunctions"
+"""cogs_dir = " "
 
 #Load Extensions
 if __name__ == '__main__':
@@ -28,6 +28,9 @@ if __name__ == '__main__':
             print ("FAIL#3 bot.load_extension(...)")
             traceback.print_exc()
 """
+@bot.command(name="testo", hidden=True)
+async def testo(ctx,  *args):
+    print ("Testing Function")
 
 """OnReady_________"""
 @bot.event
