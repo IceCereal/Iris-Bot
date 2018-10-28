@@ -11,7 +11,7 @@ The bot could:
 2. Make Memes (from existing templates)
 3. Give Admins some extra commands
 
-The bot never got to see the light of day, but it was a major improvement to the first version. Soon after, IceCereal learnt about an improvemnt to the [`Discord's API`](https://discordpy.readthedocs.io/), the [`Discord.py Rewrite`](https://discordpy.readthedocs.io/en/rewrite/index.html). All progress on the SuperUserBot's halted and on a cold, rainy day in an alley no one will ever know, [`MaidSama (Other Branch)`](https://github.com/IceCereal/MaidSama/tree/master) appeared. The
+The bot never got to see the light of day, but it was a major improvement to the first version. Soon after, IceCereal learnt about an improvement to the [`Discord's API`](https://discordpy.readthedocs.io/), the [`Discord.py Rewrite`](https://discordpy.readthedocs.io/en/rewrite/index.html). All progress on the SuperUserBot's halted and on a cold, rainy day in an alley no one will ever know, [`MaidSama (Other Branch)`](https://github.com/IceCereal/MaidSama/tree/master) appeared. The
 new kid on the block was sleeker and cooler than the old kids. After nearly a month of development, MaidSama boasted:
 1. Commands to warn, strike and kick out members
 2. Store a bit of data
