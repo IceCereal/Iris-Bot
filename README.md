@@ -19,4 +19,4 @@ new kid on the block was sleeker and cooler than the old kids. After nearly a mo
 4. Welcome new members to the Admin team
 5. Take care of certain events
 
-However, after stagnating for a couple of months, the master lost interest. However, despite being in a coma for a couple of months, MaidSama woke up.
+After stagnating for a couple of months, the master lost interest. However, despite being in a coma for a couple of months, MaidSama woke up.
