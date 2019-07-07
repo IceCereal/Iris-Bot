@@ -3,3 +3,7 @@ Notes.txt
 
 # Pycaches
 __pycache__
+
+# Extra Utilities for Iris
+*.jpg
+*.png
