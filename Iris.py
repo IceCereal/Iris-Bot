@@ -15,12 +15,16 @@ from argparse import ArgumentParser
 from pathlib import Path
 import os
 
+corePath = Path("core")
+resPath = Path("res")
+utilsPath = Path("utils")
+
 parser = ArgumentParser()
 parser.add_argument('-v', "--verbose", required=False, help="Run Iris.py with verbosity")
 
 args = parser.parse_args()
 
-if args.verbose.lower() == "true":
+if args.verbose == "True":
 	args.verbose = True
 else:
 	args.verbose = None
@@ -28,10 +32,10 @@ else:
 if args.verbose:
 	print ("Reading Token...")
 
-with open("TOKEN", 'r') as TokenObj:
+with open(resPath / "TOKEN", 'r') as TokenObj:
 	TOKEN = TokenObj.read()
 
-BOT_PREFIX = ('++', 'i+')
+BOT_PREFIX = ('++', 'i+', '+')
 bot = commands.Bot(command_prefix=BOT_PREFIX)
 
 # Set args to bot
@@ -39,7 +43,7 @@ bot.verbose = args.verbose
 
 @bot.event
 async def on_ready():
-	print ("\nLogged in as:\t" + str(bot))
+	print ("\nLogged in as:\t" + str(bot.user))
 	print ("-----------------")
 
 	await bot.change_presence(activity=discord.Game(name="The Game of Life"))
@@ -47,7 +51,7 @@ async def on_ready():
 if __name__ == '__main__':
 
 	# Load Extensions
-	cogs_dir = Path("core/cogs/")
+	cogs_dir = corePath / "cogs"
 	cogs_list = []
 
 	for root, directories, files in os.walk(cogs_dir):
@@ -61,11 +65,9 @@ if __name__ == '__main__':
 		cog_new = str(cog)
 
 		# Windows
-		cog_new = cog_new.replace('core\\', '')
 		cog_new = cog_new.replace('\\', '.')
 
 		# Linux/Mac
-		cog_new = cog_new.replace('core/', '')
 		cog_new = cog_new.replace('/', '.')
 
 		cog_new = cog_new.replace(".py", "")
