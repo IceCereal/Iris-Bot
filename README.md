@@ -2,7 +2,7 @@
 ###### A Multi-Function discord bot meant for administrative purposes made using [discord.py](https://www.github.com/Rapptz/discord.py)
 [![branch](https://img.shields.io/badge/branch-Iris-brightgreen.svg)](https://github.com/IceCereal/Iris-Bot/tree/Iris)
 [![version](https://img.shields.io/badge/version-v0.0.1-green.svg)](#)
-[![python](https://img.shields.io/badge/python-3.5|3.6|3.7-blue.svg)](#)
+[![python](https://img.shields.io/badge/python-3.5.3+-blue.svg)](#)
 [![license](https://img.shields.io/badge/license-MIT-orange.svg)](https://github.com/IceCereal/Iris-Bot/blob/Iris/LICENSE)
 
 ## Usage
