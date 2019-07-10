@@ -5,7 +5,7 @@
 [![python](https://img.shields.io/badge/python-3.5.3+-blue.svg)](#)
 [![license](https://img.shields.io/badge/license-MIT-orange.svg)](https://github.com/IceCereal/Iris-Bot/blob/Iris/LICENSE)
 
-![Iris-Bot](images/miku.jpg "Iris")
+![Iris-Bot](images/miku-min.jpg "Iris")
 (This is Miku from The Quintessential Quintuplets, in case anyone is wondering.)
 
 ## Usage
