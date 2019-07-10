@@ -6,6 +6,7 @@
 [![license](https://img.shields.io/badge/license-MIT-orange.svg)](https://github.com/IceCereal/Iris-Bot/blob/Iris/LICENSE)
 
 ![Iris-Bot](images/miku.jpg "Iris")
+(This is Miku from The Quintessential Quintuplets, in case anyone is wondering.)
 
 ## Usage
 Iris is not an invitable bot. However, as Iris' code is Open Sourced, you are free to clone the code and run it with your own Token (Replace the token in `res/TOKEN` with your token generated from Discord). To run Iris:
