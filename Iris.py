@@ -41,6 +41,13 @@ bot = commands.Bot(command_prefix=BOT_PREFIX)
 # Set args to bot
 bot.verbose = args.verbose
 
+@bot.command(
+	name="yoo",
+	alias=["hello", "sup"]
+)
+async def yoo(ctx):
+	await ctx.channel.send("What's up" + ctx.message.author.mention+ "? How you hanging?")
+
 @bot.event
 async def on_ready():
 	print ("\nLogged in as:\t" + str(bot.user))
